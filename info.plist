@@ -8,7 +8,33 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>176CB59D-6713-450F-AAD5-9769C195279B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6A2BB6DE-1618-4D3F-B11B-21214BA42310</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>66B2EE85-158F-47D7-9753-A079378283D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>176CB59D-6713-450F-AAD5-9769C195279B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6A2BB6DE-1618-4D3F-B11B-21214BA42310</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -26,7 +52,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Copy and paste URL</string>
+				<string>Copy Value</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -45,14 +71,35 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A0289A24-1DDA-428C-AFF9-9246EB624232</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>asana</string>
+				<string>a</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -64,15 +111,15 @@
 				<key>runningsubtext</key>
 				<string>Searching...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<string>./node_modules/.bin/run-node index.js "$1" tasks</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>index.js</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Task List</string>
 				<key>title</key>
-				<string>Asana search for Alfred</string>
+				<string>Asana Search for Alfred</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -88,19 +135,61 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" fields</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://app.asana.com/0/{query}</string>
-				<key>utf8</key>
+				<key>subtext</key>
+				<string>Custom Fields List</string>
+				<key>title</key>
+				<string>Asana Search for Alfred</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>A0289A24-1DDA-428C-AFF9-9246EB624232</string>
+			<string>6A2BB6DE-1618-4D3F-B11B-21214BA42310</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>TASK</key>
+					<string>{var:TASK}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>176CB59D-6713-450F-AAD5-9769C195279B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -110,7 +199,7 @@
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>https://app.asana.com/0/{query}</string>
+				<string>{query}</string>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -126,38 +215,52 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>176CB59D-6713-450F-AAD5-9769C195279B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
 		<key>66B2EE85-158F-47D7-9753-A079378283D5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>140</integer>
+		</dict>
+		<key>6A2BB6DE-1618-4D3F-B11B-21214BA42310</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>140</integer>
 		</dict>
 		<key>A0289A24-1DDA-428C-AFF9-9246EB624232</key>
 		<dict>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>460</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>60</integer>
 		</dict>
 		<key>C13785E4-AEBA-4F44-99BF-1E0BF1B4509D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>460</integer>
 			<key>ypos</key>
-			<integer>170</integer>
+			<integer>230</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
 		<key>ACCESS_TOKEN</key>
-		<string>&lt;Your personal access token&gt;</string>
+		<string>0/383fca0fa79b89b8589ebea397d026e7</string>
 		<key>WORKSPACE_ID</key>
-		<string>&lt;Your workspace ID&gt;</string>
+		<string>10600478329639</string>
 	</dict>
 	<key>version</key>
-	<string></string>
+	<string>1.2.0</string>
 	<key>webaddress</key>
-	<string>http://adriantoine.com</string>
+	<string>https://github.com/adriantoine/alfred-asana#readme</string>
 </dict>
 </plist>

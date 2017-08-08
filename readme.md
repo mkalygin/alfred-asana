@@ -5,6 +5,19 @@
 ![Asana search for Alfred](http://g.recordit.co/tRv1lXNMbb.gif)
 (powered by [Alfy](https://github.com/sindresorhus/alfy))
 
+## Notice
+
+This is a fork of original [adriantoine/alfred-asana](https://github.com/adriantoine/alfred-asana) repository. The additional functionality has been added to the workflow:
+
+- use `a` keyword by default;
+- show completed status of a task with ✅;
+- on a task select show the task along with its custom properties;
+- after task selection URLs can be opened in a browser or values can be copied with `cmd` modifier.
+
+#### Screenshots
+
+<img src="media/tasks.png" width="400"> <img src="media/fields.png" width="400">
+
 ## Install
 
 ```
