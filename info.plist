@@ -56,6 +56,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F0984462-4D1B-4748-966D-58124FD226BC</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Large Type</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -210,6 +220,19 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>largetypetext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>F0984462-4D1B-4748-966D-58124FD226BC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -248,7 +271,14 @@
 			<key>xpos</key>
 			<integer>460</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>180</integer>
+		</dict>
+		<key>F0984462-4D1B-4748-966D-58124FD226BC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>300</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -259,7 +289,7 @@
 		<string>10600478329639</string>
 	</dict>
 	<key>version</key>
-	<string>1.2.0</string>
+	<string>1.3.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/adriantoine/alfred-asana#readme</string>
 </dict>

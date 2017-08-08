@@ -8,7 +8,7 @@ const alfredNotifier = require('alfred-notifier');
 alfredNotifier();
 
 const ASANA_OPT_FIELDS = 'id,name,this.assignee.name,this.projects.name,' +
-                         'custom_fields,completed';
+                         'custom_fields,completed,notes,tags';
 
 const ASANA_BASE_URL = 'https://app.asana.com/0/';
 const WORKSPACE_ID   = process.env.WORKSPACE_ID;
@@ -59,6 +59,15 @@ const getTask = (task) => {
   };
 };
 
+const getNotes = ({ notes }) => {
+  return {
+    title:    'Notes',
+    subtitle: notes,
+    icon:     { path: 'icons/notes.png' },
+    arg:      notes,
+  };
+};
+
 const getField = (field) => {
   let value = field[`${field.type}_value`] || '';
 
@@ -69,19 +78,19 @@ const getField = (field) => {
   return {
     title:    field.name,
     subtitle: value,
-    valid:    value.startsWith('http'),
     icon:     { path: 'icons/field.png' },
     arg:      value,
   };
 };
 
-const getCustomFields = (task) => {
-  return task.custom_fields.map(getField);
+const getCustomFields = ({ custom_fields }) => {
+  return custom_fields.map(getField);
 };
 
 const getTaskWithCustomFields = (task) => {
   return [
     getTask(task),
+    getNotes(task),
     ...getCustomFields(task)
   ];
 };

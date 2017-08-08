@@ -11,7 +11,7 @@ This is a fork of original [adriantoine/alfred-asana](https://github.com/adriant
 
 - use `a` keyword by default;
 - show completed status of a task with ✅;
-- on a task select show the task along with its custom properties;
+- on a task select show the task along with its custom properties and notes;
 - after task selection URLs can be opened in a browser or values can be copied with `cmd` modifier.
 
 #### Screenshots
