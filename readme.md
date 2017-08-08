@@ -21,7 +21,7 @@ This is a fork of original [adriantoine/alfred-asana](https://github.com/adriant
 ## Install
 
 ```
-$ npm install -g alfred-asana
+$ npm install -g mkalygin/alfred-asana
 ```
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
