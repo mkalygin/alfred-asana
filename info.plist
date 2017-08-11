@@ -284,9 +284,9 @@
 	<key>variables</key>
 	<dict>
 		<key>ACCESS_TOKEN</key>
-		<string>0/383fca0fa79b89b8589ebea397d026e7</string>
+		<string>&lt;Your personal access token&gt;</string>
 		<key>WORKSPACE_ID</key>
-		<string>10600478329639</string>
+		<string>&lt;Your workspace ID&gt;</string>
 	</dict>
 	<key>version</key>
 	<string>1.3.0</string>
