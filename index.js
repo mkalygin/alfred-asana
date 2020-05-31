@@ -47,11 +47,11 @@ const getTask = (task) => {
   };
 
   const arg = MODE === 'fields'
-              ? url.resolve(ASANA_BASE_URL, `${WORKSPACE_ID}/${task.id}`)
+              ? url.resolve(ASANA_BASE_URL, `${WORKSPACE_ID}/${task.gid}`)
               : JSON.stringify({ alfredworkflow });
 
   return {
-    uid:          `${WORKSPACE_ID}/${task.id}`,
+    uid:          `${WORKSPACE_ID}/${task.gid}`,
     title:        task.completed ? `✅ ${task.name}` : task.name,
     autocomplete: task.name,
     subtitle:     getSubtitle(task),
