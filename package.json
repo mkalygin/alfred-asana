@@ -31,12 +31,12 @@
     "projects"
   ],
   "dependencies": {
-    "alfred-link": "^0.1.0",
-    "alfred-notifier": "^0.1.0",
-    "alfy": "^0.6.0",
-    "lodash.isnil": "^4.0.0"
+    "alfred-link": "0.3.1",
+    "alfred-notifier": "0.2.3",
+    "alfy": "0.8.0",
+    "lodash.isnil": "4.0.0"
   },
   "devDependencies": {
-    "semistandard": "^11.0.0"
+    "semistandard": "11.0.0"
   }
 }
